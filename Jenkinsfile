@@ -1,75 +1,46 @@
 pipeline {
     agent none
     stages {
-        stage('build') {
+        stage('bitbucket') {
             steps {
                 script {
                     echo "Building the application..."
                 }
             }
         }
-        stage('test') {
+        stage('maven') {
             steps {
                 script {
                     echo "Testing the application..."
                 }
             }
         }
-        stage('test1') {
+        stage('sonarkube') {
             steps {
                 script {
                     echo "application will run test1"
                 }
             }
         }
-        stage('test2') {
+        stage('push to nexus') {
             steps {
                 script {
                     echo "application will run test1"
                 }
             }
         }
-        stage('test3') {
+        stage('deploy in open shift') {
             steps {
                 script {
                     echo "application will run test1"
                 }
             }
         }
-        stage('test4') {
+        stage('datadog') {
             steps {
                 script {
                     echo "application will run test1"
                 }
             }
         }
-        stage('middle') {
-            steps {
-                script {
-                    echo "middle jobs"
-                }
-            }
-        }
-        stage('convert') {
-            steps {
-                script {
-                    echo "convert the file"
-                }
-            }
-        }
-         stage('push') {
-            steps {
-                script {
-                    echo "convert push"
-                }
-            }
-        }
-        stage('deploy') {
-            steps {
-                script {
-                    echo "Deploying the application..."
-                }
-            }
-        }
-    }
-}
+        
